@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Configuration - cseco</title>
+  <meta name="description" content="CSYCMS focuses on making things as easy as possible for the user, and the same goes for configuration. There are two types of configuration files- .env and system.config.js. There is only a single .env for the whole system and a single system.config.js for each site. You can find system.config.js in config/SITENAME/. CSYCMS comes with sensible examples for all the configurations you need. These are copied during the installation to act as your system defaults." />
+
+  <meta name="keywords" content="csycms, file-based content management system, knowledge base, static site generator, nodejs, configuration" />
+  <meta name="author" content="Brian Onang&#39;o" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles/uf_style.css">
+  <link rel="stylesheet" href="../styles/cstyle.css">
+  <!-- <link rel="stylesheet" href="sample.csymapp.com/styles/theme.css"> -->
+
+  
+
+</head>
+
+<body class="searchbox-hidden">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=156811091033253&autoLogAppEvents=1">
+  </script>
+
+
+  <div class="wrapper">
+    <div class="navbar-fixed" id="nav-main">
+      <nav class="custom">
+        <div class="nav-wrapper">
+          <a href="../index.html" class="brand-logo"
+            style="padding-left: 2rem; text-transform: uppercase; font-size:em;">cseco</a>
+          <a href="Configuration.html#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" id="headerLinks">
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <nav id="sidebar">
+      <div id="header-wrapper">
+        <div id="header">
+          <a id="logo" href="Configuration.html#"><span class="logo-title" style="font-size:em;">
+              cseco</span>
+          </a>
+          <form class="searchbox" action="../index.html">
+            <label for="search-by"><i class="fa fa-search"></i></label>
+            <input type="search" search name="search" id="search" value=""
+              placeholder="Search">
+            <span data-search-clear><i class="fa fa-close"></i></span>
+          </form>
+          <div id="mobile-nav">
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="scrollbar-inner">
+        <div class="highlightable">
+          <ul class="topics">
+
+            <li class="dd-item  "
+              data-nav-id="sample.csymapp.com/">
+              <a href="Configuration.html">
+                <i class="fa fa-check read-icon"></i>
+                <span></span>
+              </a>
+              <ul>
+              </ul>
+            </li>
+
+
+
+
+
+          </ul>
+          <hr />
+
+          <a class="padding" href="Configuration.html#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> Clear
+            History</a><br />
+
+          <section id="footer">
+            <p>Built with <a href="http://csycms.csymapp.com">csyms</a> - A Flat File CMS for node</p>
+            <p>
+              <p>Copyright &copy; 2018 -  2021 <a href="http://www.cseco.co.ke">CSECO</a> </p>
+            </p>
+          </section>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="body">
+      <div id="overlay"></div>
+
+      <div class="padding highlightable">
+        <a href="Configuration.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+        <div id="top-bar">
+
+
+          <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="../basics.html" itemprop="url"><span itemprop="title">Basics</span></a>
+            <i class="fa fa-angle-right"></i>
+            <a href="Configuration.html" itemprop="url"><span itemprop="title">Configuration</span></a>
+            <a class="fb-share-c" target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsabbathschool.gospelsounders.org%2FSabbath-School&amp;src=sdkpreparse"
+              style="text-decoration: none; float:right;">
+              <i class="a-icon fa fa-share"></i>Share
+            </a>
+          </div>
+          <div class="toc">
+            <ol data-toc="body" data-toc-headings="h2, h3"></ol>
+          </div>
+        </div>
+        
+<div class="row">
+  
+  <div class="col-sm-9">
+
+    <section class="content">
+
+
+
+      <h2>Configuration</h2>
+<p>CSYCMS focuses on making things as easy as possible for the user, and the same goes for configuration. There are two types of configuration files: <code>.env</code> and <code>system.config.js</code>. There is only a single <code>.env</code> for the whole system and a single <code>system.config.js</code> for each site. You can find <code>system.config.js</code> in <code>config/SITENAME/</code>. CSYCMS comes with sensible examples for all the configurations you need. These are copied during the installation to act as your system defaults.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>You may not need to edit the <code>.env</code> file if you set up and manage your sites through the <code>csycms-manage</code> script provided which you can run from the root directory of your application (/var/www/html/csycms) by <code>./src/csycms-manage.sh</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Here are the variables found in the default <code>.env</code> file:</p>
+<h3><code>.env</code></h3>
+<p><code>SITES=&quot;csycms|3000|https://github.com/csymapp/csycms-learn.git&quot; # list of sites</code></p>
+<p><code>SITES</code> is a comma separated list of sites.</p>
+<p>An entry for a single site has in order:</p>
+<ul>
+<li>site name</li>
+<li>port on which to server it</li>
+<li>the repo in which the site files are found</li>
+</ul>
+<p>These parameters are separated by a <code>|</code>. To add another site, create for it its own configuration line. And add the line to <code>SITES=</code>, separating it from the last line by a comma.</p>
+<p><code>CSYCMSDOCSREPO=https://github.com/csymapp/csycms-learn.git # repo where csycms documentation is.</code></p>
+<p>You may not have to do anything to this.</p>
+<p><code>THEMESREPO=git@github.com:csymapp/csycms-themes.git # repo where csycms themes are</code></p>
+<p>Please leave also this as it is, unless you know what you are doing.</p>
+<p><code>UPDATEINTERVAL=5 # update interval in minutes</code></p>
+<p>The period for which you'd like the system to check for update for itself and for all the sites.</p>
+<p>You can change these values while setting up the system for the first time or at any other time. Just remember to <code>systemctl restart csycms.service</code> every time you make any changes to <code>.env</code> except for the changes made during the installation.</p>
+<h3><code>system.config.js</code></h3>
+<p>You will also need to make changes to all <code>system.config.js</code> in <code>config/*/</code>. Please be sure especially to change:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Some of these changes can now be done through the <code>csycms-manage</code> script provided which you can run from the root directory of your application (/var/www/html/csycms) by <code>./src/csycms-manage.sh</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li><code>domain</code> (it is just a wrong naming which we will change later). By domain we mean the base url without the protocol. eg <code>www.cseco.co.ke</code>, <code>localhost:3001</code>, etc. This is used to form links in search results.</li>
+<li><code>site</code>. This should be the same as the site name given in <code>.env</code></li>
+<li><code>site_space</code>. This is used to defined sites whose content can be searched together. All sites in the same server having the same site_space show their content in search results for all local sites having <code>search_scope</code> set to global.</li>
+<li><code>site_title</code>. This is shown on the logo section. You may have to edit the layout template to reduce the size of the text if your site_title is very long.</li>
+<li><code>search_scope</code>. The value for this is either <code>local</code> or <code>global</code>. It defines where only the content for the current site is searched during a search performed on the site or the content for all the sites in the <code>search_space</code>.</li>
+</ul>
+<p>Each of these variables comes with an explanation as to what it does. Remember you will need to restart the app after changing config variables.</p>
+<h2>Further Configuration</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>This section describes optional settings (Settings for which there are default values).</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>You will have to do further configuration in your pages (markdown files) to define:</p>
+<ul>
+<li>the theme to use for the page. This defaults to the default csycms theme.</li>
+<li>the layout to use for the page. This defaults to layouts/${YOURSITE}/default/layout</li>
+<li>the page to render for the request to the page. Use this if you want to load your content instead from an html page in layouts/${YOURSITE}/${THEME U ARE USING}/ instead of from the markdown file.</li>
+</ul>
+<p>These settings are applied in the header section of the markdown file (having the yaml configuration as):</p>
+<p><code>theme:${theme} layout:${layout} page:${page}</code></p>
+<p>where <code>${variable}</code> is replaced entirely by a string representing the value you need to use</p>
+<p>You can see more of this on <a href="../Content.html">pages</a></p>
+
+
+      <div class="page-meta clearfix">
+        <div class="last-updated float-right">
+          Last updated on 26th Apr 2021
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+
+
+      </div>
+      <div id="navigation">
+        <a class="nav nav-prev" href="Installation.html"> <i
+            class="fa fa-chevron-left"></i></a>
+
+        <a class="nav nav-next" href="Basic-Tutorial.html"><i
+            class="fa fa-chevron-right"></i></a>
+      </div>
+
+    </section>
+
+
+    <div id="content">
+      <!-- End of content -->
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../lib/jquery/dist/jquery.min.js"></script>
+  <script src="../lib/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../lib/highlightjs/highlight.pack.min.js"></script>
+  <script src="../lib/fitvids/fitvids.min.js"></script>
+  <script src="../lib/masonry-layout/dist/masonry.pkgd.min.js"></script>
+  <script src="../scripts/ghostdown.js"></script>
+  <script src="../scripts/raneto.js"></script>
+  <script src="../scripts/uf.js"></script>
+
+  <script>
+    $(document).ready(function () {
+        $('.fb-share-c').attr('href',
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(window.location.href)}`)
+      let auth = $('#authC').html()
+      try {
+        auth = JSON.parse(auth);
+        if (auth.accessToken) {
+          localStorage.setItem("token", auth.accessToken)
+          if (!localStorage.getItem("returnafterlogin"))
+            localStorage.setItem("returnafterlogin", '/');
+        }
+      } catch (err) {
+        console.error(err)
+      }
+      if (localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a></li>')
+        $("#mobile-nav").prepend('<a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a>')
+        $(document).on("click", "a.logoutgtn", function (e) {
+          e.preventDefault()
+          let returnTo = window.location.href
+          if (!returnTo) returnTo = '/'
+          localStorage.setItem("returnafterlogin", window.location.href);
+          localStorage.removeItem("token");
+          window.location = `${$(this).attr('href')}?redirectUrl=${window.location.href}`;
+        });
+        let returnTo = localStorage.getItem("returnafterlogin")
+        if (returnTo) {
+          localStorage.removeItem("returnafterlogin");
+          window.location = returnTo
+        }
+      }
+      if (!localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="loginbtn" href="sample.csymapp.com/login">Log in</a></li>')
+        $("#mobile-nav").prepend('<a class="loginbtn" href="sample.csymapp.com/login">Log in</a>')
+        $(document).on("click", "a.loginbtn", function (e) {
+          e.preventDefault()
+          localStorage.setItem("returnafterlogin", window.location.href);
+          window.location = $(this).attr('href');
+
+        });
+      }
+    })
+
+  </script>
+
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('body').toggleClass('sidebar-hidden');
+        $(this).toggleClass('active');
+      });
+      $('#sidebarCollapse').on('click', function () {
+        $('body').toggleClass('sidebar-hidden');
+      });
+      $('[data-search-clear]').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+      $('#data-search-clear').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+
+      $('.tabs-wrapper > ul a[rel="tab"]').click(function (event) {
+        event.preventDefault();
+        $(this).parent().siblings().removeClass("current");
+        $(this).parent().addClass("current");
+        var tab = $(this).attr("href");
+        $(tab).siblings().css('display', 'none');
+        $(tab).fadeIn()
+      })
+    });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Basic Tutorial - cseco</title>
+  <meta name="description" content="Assuming you successfully installed CSYCMS, we can continue and play around with CSYCMS a little to get you more comfortable. Because CSYCMS does not require a database, it is pretty easy to work with, without having to worry about causing issues between your CSYCMS installation and any other significant data source. If something goes awry, you can generally recover very easily." />
+
+  <meta name="keywords" content="csycms, file-based content management system, knowledge base, static site generator, nodejs, configuration, tutorial" />
+  <meta name="author" content="Brian Onang&#39;o" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles/uf_style.css">
+  <link rel="stylesheet" href="../styles/cstyle.css">
+  <!-- <link rel="stylesheet" href="sample.csymapp.com/styles/theme.css"> -->
+
+  
+
+</head>
+
+<body class="searchbox-hidden">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=156811091033253&autoLogAppEvents=1">
+  </script>
+
+
+  <div class="wrapper">
+    <div class="navbar-fixed" id="nav-main">
+      <nav class="custom">
+        <div class="nav-wrapper">
+          <a href="../index.html" class="brand-logo"
+            style="padding-left: 2rem; text-transform: uppercase; font-size:em;">cseco</a>
+          <a href="Basic-Tutorial.html#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" id="headerLinks">
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <nav id="sidebar">
+      <div id="header-wrapper">
+        <div id="header">
+          <a id="logo" href="Basic-Tutorial.html#"><span class="logo-title" style="font-size:em;">
+              cseco</span>
+          </a>
+          <form class="searchbox" action="../index.html">
+            <label for="search-by"><i class="fa fa-search"></i></label>
+            <input type="search" search name="search" id="search" value=""
+              placeholder="Search">
+            <span data-search-clear><i class="fa fa-close"></i></span>
+          </form>
+          <div id="mobile-nav">
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="scrollbar-inner">
+        <div class="highlightable">
+          <ul class="topics">
+
+            <li class="dd-item  "
+              data-nav-id="sample.csymapp.com/">
+              <a href="Basic-Tutorial.html">
+                <i class="fa fa-check read-icon"></i>
+                <span></span>
+              </a>
+              <ul>
+              </ul>
+            </li>
+
+
+
+
+
+          </ul>
+          <hr />
+
+          <a class="padding" href="Basic-Tutorial.html#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> Clear
+            History</a><br />
+
+          <section id="footer">
+            <p>Built with <a href="http://csycms.csymapp.com">csyms</a> - A Flat File CMS for node</p>
+            <p>
+              <p>Copyright &copy; 2018 -  2021 <a href="http://www.cseco.co.ke">CSECO</a> </p>
+            </p>
+          </section>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="body">
+      <div id="overlay"></div>
+
+      <div class="padding highlightable">
+        <a href="Basic-Tutorial.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+        <div id="top-bar">
+
+
+          <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="../basics.html" itemprop="url"><span itemprop="title">Basics</span></a>
+            <i class="fa fa-angle-right"></i>
+            <a href="Basic-Tutorial.html" itemprop="url"><span itemprop="title">Basic Tutorial</span></a>
+            <a class="fb-share-c" target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsabbathschool.gospelsounders.org%2FSabbath-School&amp;src=sdkpreparse"
+              style="text-decoration: none; float:right;">
+              <i class="a-icon fa fa-share"></i>Share
+            </a>
+          </div>
+          <div class="toc">
+            <ol data-toc="body" data-toc-headings="h2, h3"></ol>
+          </div>
+        </div>
+        
+<div class="row">
+  
+  <div class="col-sm-9">
+
+    <section class="content">
+
+
+
+      <h2>Basic Tutorial</h2>
+<p>Assuming you successfully <a href="Installation.html">installed CSYCMS</a>, we can continue and play around with CSYCMS a little to get you more comfortable.</p>
+<p>Because CSYCMS does not require a database, it is pretty easy to work with, without having to worry about causing issues between your CSYCMS installation and any other significant data source. If something goes awry, you can generally recover very easily.</p>
+<h2>Content Basics</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>CSYCMS content folders can be stored in github and pulled from there. You will need to create a github repo and change the origin remote from the one for csycms-site to the one for your repo.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>First, let us familiarize ourselves with where CSYCMS stores content.  We will go into more depth in <a href="sample.csymapp.com/basics/Folder%20Structure">folder structure</a>, but for the time being, you need to be aware that all our user content, is stored in the <code>contents/*/</code> folder of your CSYCMS install. The contents folder has severall site folders and only the content in a given site folder can be accessed from that site.</p>
+<p>The content folders are named starting with the chapter number then the name. eg <code>01.basics</code> But it is important to note that the numeric portion up to and including the <code>.</code> will be removed from URLs.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Please use a hyphen to separate words in your directory and file names instead of spaces. This is good for SEO.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Each content folder defines a chapter and should have either a <code>chapter.md</code> or a <code>docs.md</code> file. <code>chapter.md</code> is the first page displayed for each chapter.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>You can have your content in a hierarchical directory structure of upto 4 levels. We do not know what happens after that. But pages in the fifth level will not be displaced on the left menu in the default layout that we have.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Note also that the numeric portion of the chapter can have any number of zeros preceeding the number.</p>
+<h2>Home Page Configuration</h2>
+<p>No configuration needs to be done for the home page. The <code>chapter.md</code> page of the <code>01.</code> chapter will be displayed as the home page.</p>
+<h2>Page Editing</h2>
+<p>Pages in <strong>CSYCMS</strong> are composed in <strong>Markdown</strong> syntax.  Markdown is a formatting syntax that is written in plain text and then converted automatically to HTML. It uses elementary text symbols to indicate key HTML tags making it very easy to write without having to know the complexities of HTML. There are numerous other benefits of using Markdown including: less errors, valid markup, very readable, simple to learn, transferable, etc.</p>
+<p>You can read an <a href="../Content/Markdown&#32;Syntax.html">extensive write-up of available syntax</a> with examples in the documentation, but for now, follow along.</p>
+<p>Open the home page in your text editor. This is <code>chapter.md</code> in the folder you have named beginning with <code>01.</code></p>
+<p>When you edit the page in a text editor, the content will look something like this:</p>
+<pre><code>---
+title: Basics
+metadata:
+    description: Discover CSYCMS.
+taxonomy:
+    category: docs
+---
+
+#### Chapter 1
+
+# Basics
+
+Discover what CSYCMS is all about and the core concepts behind it.
+</code></pre>
+<p>Let us break this down a little so you can see how easy it is to write in Markdown. The stuff between the <code>---</code> indicators are the <a href="../Content/Headers.html">Page Headers</a>, and these are written in a straightforward format called <a href="../Advanced/YAML.html">YAML</a>. This configuration block that sits in the <code>.md</code> file is commonly known as <strong>YAML Front Matter</strong>.</p>
+<pre><code class="language-ruby">title: Basics
+</code></pre>
+<p>This block sets the HTML title tag for the page (the text you see in the browser tab).  You can also access this from your themes via the <code>meta.title</code> attribute.  There are a <a href="../Content/Headers.html">few standard headers</a> that let you configure a variety of options for this page. Another example is <code>layout: layout</code> that lets you override the layout used to display the page, etc.</p>
+<pre><code class="language-markdown">#### Chapter 1
+
+# Basics
+</code></pre>
+<p>The <code>#</code> or <code>hashes</code> syntax in markdown indicates a title.  A single <code>#</code> with a space and then text converts into an <code>&lt;h1&gt;</code> header in HTML. <code>##</code> or double hash would convert into an <code>&lt;h2&gt;</code> tag.  Of course, this goes all the way up to the HTML valid <code>&lt;h6&gt;</code> tag which of course, would be six hashes: <code>###### My H6 Level Header</code>.</p>
+<pre><code class="language-markdown">Discover what CSYCMS is all about and the core concepts behind it.
+</code></pre>
+<p>This is a simple paragraph that would have been wrapped in regular <code>&lt;p&gt;</code> tags when converted to HTML.  <code>** **</code> markers indicate <strong>bold</strong> text or <code>&lt;b&gt;</code> in HTML.  Italic text is indicated by wrapping <em>text</em> in <code>_</code> markers.</p>
+<p>!! Ensure you save your <code>.md</code> files as <code>UTF8</code> files.  This will ensure they work with language-specific special characters.</p>
+<h2>Adding a New Page</h2>
+<p>Creating a new page is a simple affair in <strong>CSYCMS</strong>.  Just follow these simple steps:</p>
+<ol>
+<li>
+<p>Navigate to your site pages folder, eg <code>content/csycmsdocs/</code> and create a new folder. Remember to preceed the folder name with a chapter number, and don't repeat the chapters numbers. There is not yet any provision to handle such kind of errors if you create them.</p>
+</li>
+<li>
+<p>Launch your text editor, create a new file, and paste in the following sample code:</p>
+<pre><code class="language-markdown">---
+title: My New Page
+---
+# My New Page!
+
+This is the body of **my new page** and I can easily use _Markdown_ syntax here.
+</code></pre>
+</li>
+<li>
+<p>Save this as <code>docs.md</code> in the folder that you created. This will tell <strong>CSYCMS</strong> to render the page using the <strong>default</strong> template.</p>
+</li>
+<li>
+<p>That's it! Restart your server(no, this does not mean restart csycms service. This will overwrite your changes by pulling new content from the github repo set for the site. Just restart the node.js process which is running the site)  and reload your browser to see your new page in the menu.</p>
+</li>
+</ol>
+<p>The page will automatically show up in the Menu depending on the default theme that you have configured your site to use. You will have to restart your site once you create the new page.</p>
+<p><strong>Congratulations</strong>, you have now successfully created a new page in CSYCMS.  There is much more you can do with CSYCMS, so please continue reading to find out about more advanced capabilities and in-depth features.</p>
+<h2>csycms-manage</h2>
+<p>There is a little commandline tool (a bash script to help you with some of the processes). The script in <code>src/csycms-manage.sh</code> will help you to:</p>
+<ul>
+<li>create new sites</li>
+<li>delete existing sites</li>
+<li>update sites (commit changes to github)</li>
+<li>run sites</li>
+</ul>
+<p>It should have sufficient documentation to help you learn how to use it. Just go to the root directory of your installation and run</p>
+<p><code>./src/csycms-manage.sh</code></p>
+
+
+      <div class="page-meta clearfix">
+        <div class="last-updated float-right">
+          Last updated on 26th Apr 2021
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+
+
+      </div>
+      <div id="navigation">
+        <a class="nav nav-prev" href="Configuration.html"> <i
+            class="fa fa-chevron-left"></i></a>
+
+        <a class="nav nav-next" href="Folder-Structure.html"><i
+            class="fa fa-chevron-right"></i></a>
+      </div>
+
+    </section>
+
+
+    <div id="content">
+      <!-- End of content -->
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../lib/jquery/dist/jquery.min.js"></script>
+  <script src="../lib/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../lib/highlightjs/highlight.pack.min.js"></script>
+  <script src="../lib/fitvids/fitvids.min.js"></script>
+  <script src="../lib/masonry-layout/dist/masonry.pkgd.min.js"></script>
+  <script src="../scripts/ghostdown.js"></script>
+  <script src="../scripts/raneto.js"></script>
+  <script src="../scripts/uf.js"></script>
+
+  <script>
+    $(document).ready(function () {
+        $('.fb-share-c').attr('href',
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(window.location.href)}`)
+      let auth = $('#authC').html()
+      try {
+        auth = JSON.parse(auth);
+        if (auth.accessToken) {
+          localStorage.setItem("token", auth.accessToken)
+          if (!localStorage.getItem("returnafterlogin"))
+            localStorage.setItem("returnafterlogin", '/');
+        }
+      } catch (err) {
+        console.error(err)
+      }
+      if (localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a></li>')
+        $("#mobile-nav").prepend('<a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a>')
+        $(document).on("click", "a.logoutgtn", function (e) {
+          e.preventDefault()
+          let returnTo = window.location.href
+          if (!returnTo) returnTo = '/'
+          localStorage.setItem("returnafterlogin", window.location.href);
+          localStorage.removeItem("token");
+          window.location = `${$(this).attr('href')}?redirectUrl=${window.location.href}`;
+        });
+        let returnTo = localStorage.getItem("returnafterlogin")
+        if (returnTo) {
+          localStorage.removeItem("returnafterlogin");
+          window.location = returnTo
+        }
+      }
+      if (!localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="loginbtn" href="sample.csymapp.com/login">Log in</a></li>')
+        $("#mobile-nav").prepend('<a class="loginbtn" href="sample.csymapp.com/login">Log in</a>')
+        $(document).on("click", "a.loginbtn", function (e) {
+          e.preventDefault()
+          localStorage.setItem("returnafterlogin", window.location.href);
+          window.location = $(this).attr('href');
+
+        });
+      }
+    })
+
+  </script>
+
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('body').toggleClass('sidebar-hidden');
+        $(this).toggleClass('active');
+      });
+      $('#sidebarCollapse').on('click', function () {
+        $('body').toggleClass('sidebar-hidden');
+      });
+      $('[data-search-clear]').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+      $('#data-search-clear').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+
+      $('.tabs-wrapper > ul a[rel="tab"]').click(function (event) {
+        event.preventDefault();
+        $(this).parent().siblings().removeClass("current");
+        $(this).parent().addClass("current");
+        var tab = $(this).attr("href");
+        $(tab).siblings().css('display', 'none');
+        $(tab).fadeIn()
+      })
+    });
+
+  </script>
+
+</body>
+
+</html>
