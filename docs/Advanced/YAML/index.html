@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> YAML - cseco</title>
+  <meta name="description" content="The data you enter in a YAML file is used in conjunction with a library to create the pages you see within CSYCMS." />
+
+
+  <meta name="author" content="Brian Onang&#39;o" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles/uf_style.css">
+  <link rel="stylesheet" href="../styles/cstyle.css">
+  <!-- <link rel="stylesheet" href="sample.csymapp.com/styles/theme.css"> -->
+
+  
+
+</head>
+
+<body class="searchbox-hidden">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=156811091033253&autoLogAppEvents=1">
+  </script>
+
+
+  <div class="wrapper">
+    <div class="navbar-fixed" id="nav-main">
+      <nav class="custom">
+        <div class="nav-wrapper">
+          <a href="../index.html" class="brand-logo"
+            style="padding-left: 2rem; text-transform: uppercase; font-size:em;">cseco</a>
+          <a href="YAML.html#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" id="headerLinks">
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <nav id="sidebar">
+      <div id="header-wrapper">
+        <div id="header">
+          <a id="logo" href="YAML.html#"><span class="logo-title" style="font-size:em;">
+              cseco</span>
+          </a>
+          <form class="searchbox" action="../index.html">
+            <label for="search-by"><i class="fa fa-search"></i></label>
+            <input type="search" search name="search" id="search" value=""
+              placeholder="Search">
+            <span data-search-clear><i class="fa fa-close"></i></span>
+          </form>
+          <div id="mobile-nav">
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="scrollbar-inner">
+        <div class="highlightable">
+          <ul class="topics">
+
+            <li class="dd-item  "
+              data-nav-id="sample.csymapp.com/">
+              <a href="YAML.html">
+                <i class="fa fa-check read-icon"></i>
+                <span></span>
+              </a>
+              <ul>
+              </ul>
+            </li>
+
+
+
+
+
+          </ul>
+          <hr />
+
+          <a class="padding" href="YAML.html#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> Clear
+            History</a><br />
+
+          <section id="footer">
+            <p>Built with <a href="http://csycms.csymapp.com">csyms</a> - A Flat File CMS for node</p>
+            <p>
+              <p>Copyright &copy; 2018 -  2021 <a href="http://www.cseco.co.ke">CSECO</a> </p>
+            </p>
+          </section>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="body">
+      <div id="overlay"></div>
+
+      <div class="padding highlightable">
+        <a href="YAML.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+        <div id="top-bar">
+
+
+          <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="../Advanced.html" itemprop="url"><span itemprop="title">Advanced</span></a>
+            <i class="fa fa-angle-right"></i>
+            <a href="YAML.html" itemprop="url"><span itemprop="title">YAML</span></a>
+            <a class="fb-share-c" target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsabbathschool.gospelsounders.org%2FSabbath-School&amp;src=sdkpreparse"
+              style="text-decoration: none; float:right;">
+              <i class="a-icon fa fa-share"></i>Share
+            </a>
+          </div>
+          <div class="toc">
+            <ol data-toc="body" data-toc-headings="h2, h3"></ol>
+          </div>
+        </div>
+        
+<div class="row">
+  
+  <div class="col-sm-9">
+
+    <section class="content">
+
+
+
+      <h1>YAML</h1>
+<p>YAML stands for <em>&quot;YAML Ain't Markup Language&quot;</em> and it is used extensively in CSYCMS for page settings.</p>
+<p>YAML is to configuration what markdown is to markup. It’s basically a human-readable structured data format. It is less complex and ungainly than XML or JSON, but provides similar capabilities. It essentially allows you to provide powerful configuration settings, without having to learn a more complex code type like CSS, JavaScript, and PHP.</p>
+<p>YAML is built from the ground up to be simple to use. At its core, a YAML file is used to describe data. One of the benefits of using YAML is that the information in a single YAML file can be easily translated to multiple language types.</p>
+<p>Basically, the data you enter in a YAML file is used in conjunction with a library to create the pages you see within CSYCMS.</p>
+<h2>YAML Basic Rules</h2>
+<p>There are some rules that YAML has in place to avoid issues related to ambiguity in relation to various languages and editing programs. These rules make it possible for a single YAML file to be interpreted consistently, regardless of which application and/or library is being used to interpret it.</p>
+<ul>
+<li>YAML files should end in <code>.yaml</code> whenever possible in CSYCMS.</li>
+<li>YAML is case sensitive.</li>
+<li>YAML does not allow the use of tabs. Spaces are used instead as tabs are not universally supported.</li>
+</ul>
+<h2>Basic Data Types</h2>
+<p>YAML excels at working with <strong>mappings</strong> (hashes / dictionaries), <strong>sequences</strong> (arrays / lists), and <strong>scalars</strong> (strings / numbers). While it can be used with most programming languages, it works best with languages that are built around these data structure types. This includes: PHP, Python, Perl, JavaScript, and Ruby.</p>
+<h2>Scalars</h2>
+<p>Scalars are a pretty basic concept. They are the strings and numbers that make up the data on the page. A scalar could be a boolean property, like <code>Yes</code>, integer (number) such as <code>5</code>, or a string of text, like a sentence or the title of your website.</p>
+<p>Scalars are often called variables in programming. If you were making a list of types of animals, they would be the names given to those animals.</p>
+<p>Most scalars are unquoted, but if you are typing a string that uses punctuation and other elements that can be confused with YAML syntax (dashes, colons, etc.) you may want to quote this data using single <code>'</code> or double <code>&quot;</code> quotation marks. Double quotation marks allow you to use escapings to represent ASCII and Unicode characters.</p>
+<pre><code class="language-yaml">integer: 25
+string: &quot;25&quot;
+float: 25.0
+boolean: Yes
+</code></pre>
+<h2>Sequences</h2>
+<p>Here is a simple sequence you might find in CSYCMS. It is a basic list with each item in the list placed in its own line with an opening dash.</p>
+<pre><code class="language-yaml">- Cat
+- Dog
+- Goldfish
+</code></pre>
+<p>This sequence places each item in the list at the same level. If you want to create a nested sequence with items and sub-items, you can do so by placing a single space before each dash in the sub-items. YAML uses spaces, <strong>NOT</strong> tabs, for indentation. You can see an example of this below.</p>
+<pre><code class="language-yaml">-
+ - Cat
+ - Dog
+ - Goldfish
+-
+ - Python
+ - Lion
+ - Tiger
+</code></pre>
+<p>If you wish to nest your sequences even deeper, you just need to add more levels.</p>
+<pre><code class="language-yaml">-
+ -
+  - Cat
+  - Dog
+  - Goldfish
+</code></pre>
+<p>Sequences can be added to other data structure types, such as mappings or scalars.</p>
+<h2>Mappings</h2>
+<p>Mapping gives you the ability to list keys with values. This is useful in cases where you are assigning a name or a property to a specific element.</p>
+<pre><code class="language-yaml">animal: pets
+</code></pre>
+<p>This example maps the value of <code>pets</code> to the <code>animal</code> key. When used in conjunction with a sequence, you can see that you are starting to build a list of <code>pets</code>. In the following example, the dash used to label each item counts as indentation, making the line items the child and the mapping line <code>pets</code> the parent.</p>
+<pre><code class="language-yaml">pets:
+ - Cat
+ - Dog
+ - Goldfish
+</code></pre>
+<h2>Resources and Further Documentation</h2>
+<p>For more information about YAML, including detailed documentation about how it works, check out the resources linked below.</p>
+<ul>
+<li><a href="https://github.com/darvid/trine/wiki/YAML-Primer">Dave's YAML Primer</a></li>
+<li><a href="http://www.yaml.org/spec/1.2/spec.html">Official YAML 1.2 Documentation</a></li>
+<li><a href="http://www.yaml.org/refcard.html">YAML Reference Card</a></li>
+<li><a href="http://rhnh.net/2011/01/31/yaml-tutorial">Xavier Shay's YAML Tutorial</a></li>
+<li><a href="http://www.yamllint.com/">YAMLLint</a></li>
+</ul>
+
+
+      <div class="page-meta clearfix">
+        <div class="last-updated float-right">
+          Last updated on 26th Apr 2021
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+
+
+      </div>
+      <div id="navigation">
+        <a class="nav nav-prev" href="../Advanced.html"> <i
+            class="fa fa-chevron-left"></i></a>
+
+        <a class="nav nav-next" href="../Showcase.html"><i
+            class="fa fa-chevron-right"></i></a>
+      </div>
+
+    </section>
+
+
+    <div id="content">
+      <!-- End of content -->
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../lib/jquery/dist/jquery.min.js"></script>
+  <script src="../lib/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../lib/highlightjs/highlight.pack.min.js"></script>
+  <script src="../lib/fitvids/fitvids.min.js"></script>
+  <script src="../lib/masonry-layout/dist/masonry.pkgd.min.js"></script>
+  <script src="../scripts/ghostdown.js"></script>
+  <script src="../scripts/raneto.js"></script>
+  <script src="../scripts/uf.js"></script>
+
+  <script>
+    $(document).ready(function () {
+        $('.fb-share-c').attr('href',
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(window.location.href)}`)
+      let auth = $('#authC').html()
+      try {
+        auth = JSON.parse(auth);
+        if (auth.accessToken) {
+          localStorage.setItem("token", auth.accessToken)
+          if (!localStorage.getItem("returnafterlogin"))
+            localStorage.setItem("returnafterlogin", '/');
+        }
+      } catch (err) {
+        console.error(err)
+      }
+      if (localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a></li>')
+        $("#mobile-nav").prepend('<a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a>')
+        $(document).on("click", "a.logoutgtn", function (e) {
+          e.preventDefault()
+          let returnTo = window.location.href
+          if (!returnTo) returnTo = '/'
+          localStorage.setItem("returnafterlogin", window.location.href);
+          localStorage.removeItem("token");
+          window.location = `${$(this).attr('href')}?redirectUrl=${window.location.href}`;
+        });
+        let returnTo = localStorage.getItem("returnafterlogin")
+        if (returnTo) {
+          localStorage.removeItem("returnafterlogin");
+          window.location = returnTo
+        }
+      }
+      if (!localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="loginbtn" href="sample.csymapp.com/login">Log in</a></li>')
+        $("#mobile-nav").prepend('<a class="loginbtn" href="sample.csymapp.com/login">Log in</a>')
+        $(document).on("click", "a.loginbtn", function (e) {
+          e.preventDefault()
+          localStorage.setItem("returnafterlogin", window.location.href);
+          window.location = $(this).attr('href');
+
+        });
+      }
+    })
+
+  </script>
+
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('body').toggleClass('sidebar-hidden');
+        $(this).toggleClass('active');
+      });
+      $('#sidebarCollapse').on('click', function () {
+        $('body').toggleClass('sidebar-hidden');
+      });
+      $('[data-search-clear]').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+      $('#data-search-clear').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+
+      $('.tabs-wrapper > ul a[rel="tab"]').click(function (event) {
+        event.preventDefault();
+        $(this).parent().siblings().removeClass("current");
+        $(this).parent().addClass("current");
+        var tab = $(this).attr("href");
+        $(tab).siblings().css('display', 'none');
+        $(tab).fadeIn()
+      })
+    });
+
+  </script>
+
+</body>
+
+</html>

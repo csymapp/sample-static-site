@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Page Linking - cseco</title>
+  <meta name="description" content="CSYCMS has a variety of flexible linking options that allow you to link from one page to another, and even to remote pages. If you have ever linked files using HTML or worked with a file system using a command line, a lot of this should be very easy to pick up." />
+
+
+  <meta name="author" content="Brian Onang&#39;o" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles/uf_style.css">
+  <link rel="stylesheet" href="../styles/cstyle.css">
+  <!-- <link rel="stylesheet" href="sample.csymapp.com/styles/theme.css"> -->
+
+  
+
+</head>
+
+<body class="searchbox-hidden">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=156811091033253&autoLogAppEvents=1">
+  </script>
+
+
+  <div class="wrapper">
+    <div class="navbar-fixed" id="nav-main">
+      <nav class="custom">
+        <div class="nav-wrapper">
+          <a href="../index.html" class="brand-logo"
+            style="padding-left: 2rem; text-transform: uppercase; font-size:em;">cseco</a>
+          <a href="Page&#32;Linking.html#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" id="headerLinks">
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <nav id="sidebar">
+      <div id="header-wrapper">
+        <div id="header">
+          <a id="logo" href="Page&#32;Linking.html#"><span class="logo-title" style="font-size:em;">
+              cseco</span>
+          </a>
+          <form class="searchbox" action="../index.html">
+            <label for="search-by"><i class="fa fa-search"></i></label>
+            <input type="search" search name="search" id="search" value=""
+              placeholder="Search">
+            <span data-search-clear><i class="fa fa-close"></i></span>
+          </form>
+          <div id="mobile-nav">
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="scrollbar-inner">
+        <div class="highlightable">
+          <ul class="topics">
+
+            <li class="dd-item  "
+              data-nav-id="sample.csymapp.com/">
+              <a href="Page&#32;Linking.html">
+                <i class="fa fa-check read-icon"></i>
+                <span></span>
+              </a>
+              <ul>
+              </ul>
+            </li>
+
+
+
+
+
+          </ul>
+          <hr />
+
+          <a class="padding" href="Page&#32;Linking.html#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> Clear
+            History</a><br />
+
+          <section id="footer">
+            <p>Built with <a href="http://csycms.csymapp.com">csyms</a> - A Flat File CMS for node</p>
+            <p>
+              <p>Copyright &copy; 2018 -  2021 <a href="http://www.cseco.co.ke">CSECO</a> </p>
+            </p>
+          </section>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="body">
+      <div id="overlay"></div>
+
+      <div class="padding highlightable">
+        <a href="Page&#32;Linking.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+        <div id="top-bar">
+
+
+          <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="../Content.html" itemprop="url"><span itemprop="title">Content</span></a>
+            <i class="fa fa-angle-right"></i>
+            <a href="Page&#32;Linking.html" itemprop="url"><span itemprop="title">Page Linking</span></a>
+            <a class="fb-share-c" target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsabbathschool.gospelsounders.org%2FSabbath-School&amp;src=sdkpreparse"
+              style="text-decoration: none; float:right;">
+              <i class="a-icon fa fa-share"></i>Share
+            </a>
+          </div>
+          <div class="toc">
+            <ol data-toc="body" data-toc-headings="h2, h3"></ol>
+          </div>
+        </div>
+        
+<div class="row">
+  
+  <div class="col-sm-9">
+
+    <section class="content">
+
+
+
+      <h2>Page Linking</h2>
+<p>CSYCMS has a variety of flexible linking options that allow you to link from one page to another, and even to remote pages. If you have ever linked files using HTML or worked with a file system using a command line, a lot of this should be very easy to pick up.</p>
+<p>To get us started, here is a quick look at some of the common components of a CSYCMS link, and what they mean.</p>
+<pre><code>[Linked Content](../path/slug/page)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">String</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>[]</code></td>
+<td style="text-align:left">The square bracket is used to wrap the text or alternate content that becomes linked. In HTML, this would be the content placed between <code>&lt;a href=&quot;&quot;&gt;</code> and <code>&lt;/a&gt;</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>()</code></td>
+<td style="text-align:left">The parenthesis is used to surround the link itself. This is placed directly after the square bracket.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>../</code></td>
+<td style="text-align:left">When used in the link, it indicates a move up a directory.</td>
+</tr>
+</tbody>
+</table>
+<h3>Directory/Slug relative</h3>
+<p><strong>Directory Relative</strong> links use destinations set relative to the current page. This can be as simple as linking to another file in the current directory, such as an image file, or as complex as going up several directory levels and then back down to the specific folder/file you need to have displayed.</p>
+<p>With relative links, the location of the source file is every bit as important as that of the destination. If either file in the mix is moved, changing the path between them, the link can be broken.</p>
+<p>The advantage of this type of linking structure is that you can easily switch between a local development server and a live server with a different domain name and as long as the file structure remains consistent, the links should work without a problem.</p>
+<pre><code class="language-markdown">[link](../../green/grass/item)
+</code></pre>
+<p>This link moves up two folders, as indicated by <code>../../</code>, and then down two folders, pointing directly to <code>item</code> as the destination.</p>
+<p>In writing the links, please remember to ignore the numerical part (chapter numbers) of the directories and pages.</p>
+<p>Sometimes, you just want to direct the user up a single directory, loading the default page. Since an exact file is not indicated, CSYCMS is trusted to choose the right one to load. For a well-organized CSYCMS site, this should be no problem.</p>
+<h3>Absolute</h3>
+<p>Absolute links are similar to relative links, but are relative to the root of the site. In <strong>CSYCMS</strong>, this is typically based in your <strong>/user/pages/</strong> directory. This type of link can be done in two different ways.</p>
+<p>You can do it in a similar fashion to the <strong>Slug Relative</strong> style which uses the slug, or directory name in the path for simplicity. This method removes potential issues of order changes later on (changing the number at the beginning of the folder name) breaking the link. This would be the most commonly used method of absolute linking.</p>
+<p>In an absolute link, the link opens with a <code>/</code>. Here is an example of an absolute link made to <code>pages/blue/sky/item</code> in the <strong>Slug</strong> style.</p>
+<pre><code class="language-markdown">[link](/blue/sky)
+</code></pre>
+<p>The second method is fashioned after the <strong>Directory Relative</strong> style detailed previously. This method leaves in elements like the ordering numbers at the beginning of directory names. While this does add the potential of a broken link when content is reordered, it is more reliable when used with services like <a href="http://github.com">Github</a> where content links do not have the benefit of CSYCMS's flexibility. Here is an example of an absolute link made to <code>pages/01.blue/01.sky/item.md</code> using this style.</p>
+<pre><code class="language-markdown">[link](/01.blue/01.sky)
+</code></pre>
+<h3>Remote</h3>
+<p>Remote links enable you to link directly to pretty much any file or document out there via its URL. This doesn't have to include your own site's content, but it can. Here is an example of how you would link to Google's home page.</p>
+<pre><code class="language-markdown">[link](http://www.google.com)
+</code></pre>
+<p>You can link to pretty much any direct URL, including secured HTTPS links. For example:</p>
+<pre><code class="language-markdown">[link](https://github.com)
+</code></pre>
+
+
+      <div class="page-meta clearfix">
+        <div class="last-updated float-right">
+          Last updated on 26th Apr 2021
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+
+
+      </div>
+      <div id="navigation">
+        <a class="nav nav-prev" href="Markdown&#32;Syntax.html"> <i
+            class="fa fa-chevron-left"></i></a>
+
+        <a class="nav nav-next" href="Image&#32;Linking.html"><i
+            class="fa fa-chevron-right"></i></a>
+      </div>
+
+    </section>
+
+
+    <div id="content">
+      <!-- End of content -->
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../lib/jquery/dist/jquery.min.js"></script>
+  <script src="../lib/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../lib/highlightjs/highlight.pack.min.js"></script>
+  <script src="../lib/fitvids/fitvids.min.js"></script>
+  <script src="../lib/masonry-layout/dist/masonry.pkgd.min.js"></script>
+  <script src="../scripts/ghostdown.js"></script>
+  <script src="../scripts/raneto.js"></script>
+  <script src="../scripts/uf.js"></script>
+
+  <script>
+    $(document).ready(function () {
+        $('.fb-share-c').attr('href',
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(window.location.href)}`)
+      let auth = $('#authC').html()
+      try {
+        auth = JSON.parse(auth);
+        if (auth.accessToken) {
+          localStorage.setItem("token", auth.accessToken)
+          if (!localStorage.getItem("returnafterlogin"))
+            localStorage.setItem("returnafterlogin", '/');
+        }
+      } catch (err) {
+        console.error(err)
+      }
+      if (localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a></li>')
+        $("#mobile-nav").prepend('<a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a>')
+        $(document).on("click", "a.logoutgtn", function (e) {
+          e.preventDefault()
+          let returnTo = window.location.href
+          if (!returnTo) returnTo = '/'
+          localStorage.setItem("returnafterlogin", window.location.href);
+          localStorage.removeItem("token");
+          window.location = `${$(this).attr('href')}?redirectUrl=${window.location.href}`;
+        });
+        let returnTo = localStorage.getItem("returnafterlogin")
+        if (returnTo) {
+          localStorage.removeItem("returnafterlogin");
+          window.location = returnTo
+        }
+      }
+      if (!localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="loginbtn" href="sample.csymapp.com/login">Log in</a></li>')
+        $("#mobile-nav").prepend('<a class="loginbtn" href="sample.csymapp.com/login">Log in</a>')
+        $(document).on("click", "a.loginbtn", function (e) {
+          e.preventDefault()
+          localStorage.setItem("returnafterlogin", window.location.href);
+          window.location = $(this).attr('href');
+
+        });
+      }
+    })
+
+  </script>
+
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('body').toggleClass('sidebar-hidden');
+        $(this).toggleClass('active');
+      });
+      $('#sidebarCollapse').on('click', function () {
+        $('body').toggleClass('sidebar-hidden');
+      });
+      $('[data-search-clear]').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+      $('#data-search-clear').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+
+      $('.tabs-wrapper > ul a[rel="tab"]').click(function (event) {
+        event.preventDefault();
+        $(this).parent().siblings().removeClass("current");
+        $(this).parent().addClass("current");
+        var tab = $(this).attr("href");
+        $(tab).siblings().css('display', 'none');
+        $(tab).fadeIn()
+      })
+    });
+
+  </script>
+
+</body>
+
+</html>

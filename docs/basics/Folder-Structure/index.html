@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Folder Structure - cseco</title>
+  <meta name="description" content="As has been mentioned, the CSYCMS folder structure can go upto 4 levels. You can refer to the directory structure below for an example of how to create your own. It does not have to go to the fourth level. One level is still enough if that is sufficient for your needs." />
+
+  <meta name="keywords" content="csycms, file-based content management system, knowledge base, static site generator, nodejs" />
+  <meta name="author" content="Brian Onang&#39;o" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../styles/uf_style.css">
+  <link rel="stylesheet" href="../styles/cstyle.css">
+  <!-- <link rel="stylesheet" href="sample.csymapp.com/styles/theme.css"> -->
+
+  
+
+</head>
+
+<body class="searchbox-hidden">
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=156811091033253&autoLogAppEvents=1">
+  </script>
+
+
+  <div class="wrapper">
+    <div class="navbar-fixed" id="nav-main">
+      <nav class="custom">
+        <div class="nav-wrapper">
+          <a href="../index.html" class="brand-logo"
+            style="padding-left: 2rem; text-transform: uppercase; font-size:em;">cseco</a>
+          <a href="Folder-Structure.html#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down" id="headerLinks">
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <nav id="sidebar">
+      <div id="header-wrapper">
+        <div id="header">
+          <a id="logo" href="Folder-Structure.html#"><span class="logo-title" style="font-size:em;">
+              cseco</span>
+          </a>
+          <form class="searchbox" action="../index.html">
+            <label for="search-by"><i class="fa fa-search"></i></label>
+            <input type="search" search name="search" id="search" value=""
+              placeholder="Search">
+            <span data-search-clear><i class="fa fa-close"></i></span>
+          </form>
+          <div id="mobile-nav">
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="scrollbar-inner">
+        <div class="highlightable">
+          <ul class="topics">
+
+            <li class="dd-item  "
+              data-nav-id="sample.csymapp.com/">
+              <a href="Folder-Structure.html">
+                <i class="fa fa-check read-icon"></i>
+                <span></span>
+              </a>
+              <ul>
+              </ul>
+            </li>
+
+
+
+
+
+          </ul>
+          <hr />
+
+          <a class="padding" href="Folder-Structure.html#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> Clear
+            History</a><br />
+
+          <section id="footer">
+            <p>Built with <a href="http://csycms.csymapp.com">csyms</a> - A Flat File CMS for node</p>
+            <p>
+              <p>Copyright &copy; 2018 -  2021 <a href="http://www.cseco.co.ke">CSECO</a> </p>
+            </p>
+          </section>
+        </div>
+      </div>
+    </nav>
+
+
+    <section id="body">
+      <div id="overlay"></div>
+
+      <div class="padding highlightable">
+        <a href="Folder-Structure.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+        <div id="top-bar">
+
+
+          <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a href="../basics.html" itemprop="url"><span itemprop="title">Basics</span></a>
+            <i class="fa fa-angle-right"></i>
+            <a href="Folder-Structure.html" itemprop="url"><span itemprop="title">Folder Structure</span></a>
+            <a class="fb-share-c" target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsabbathschool.gospelsounders.org%2FSabbath-School&amp;src=sdkpreparse"
+              style="text-decoration: none; float:right;">
+              <i class="a-icon fa fa-share"></i>Share
+            </a>
+          </div>
+          <div class="toc">
+            <ol data-toc="body" data-toc-headings="h2, h3"></ol>
+          </div>
+        </div>
+        
+<div class="row">
+  
+  <div class="col-sm-9">
+
+    <section class="content">
+
+
+
+      <h2>Folder Structure</h2>
+<p>As has been mentioned, the CSYCMS folder structure can go upto 4 levels. You can refer to the directory structure below for an example of how to create your own. It does not have to go to the fourth level. One level is still enough if that is sufficient for your needs.</p>
+<pre><code>- content
+          | - Bible Site
+            |- 01. Old-Testament
+                |- chapter.md
+                |- 01. The-Book-of-Genesis
+                   | - chaper.md
+                   |- 01. Before-the-flood
+                      |- chapter.md
+                      |- 01. Creation-Story
+                        |- chapter.md
+                        |- 01.chapter-1
+                          |- docs.md 
+                        |- 02.chapter-2
+                          | - docs.md 
+            |- 02. New-Testament
+          | - site 2
+          .
+          .
+          .
+          | - site n
+</code></pre>
+
+
+      <div class="page-meta clearfix">
+        <div class="last-updated float-right">
+          Last updated on 26th Apr 2021
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+</div>
+
+
+
+      </div>
+      <div id="navigation">
+        <a class="nav nav-prev" href="Basic-Tutorial.html"> <i
+            class="fa fa-chevron-left"></i></a>
+
+        <a class="nav nav-next" href="Testing.html"><i
+            class="fa fa-chevron-right"></i></a>
+      </div>
+
+    </section>
+
+
+    <div id="content">
+      <!-- End of content -->
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../lib/jquery/dist/jquery.min.js"></script>
+  <script src="../lib/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../lib/highlightjs/highlight.pack.min.js"></script>
+  <script src="../lib/fitvids/fitvids.min.js"></script>
+  <script src="../lib/masonry-layout/dist/masonry.pkgd.min.js"></script>
+  <script src="../scripts/ghostdown.js"></script>
+  <script src="../scripts/raneto.js"></script>
+  <script src="../scripts/uf.js"></script>
+
+  <script>
+    $(document).ready(function () {
+        $('.fb-share-c').attr('href',
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(window.location.href)}`)
+      let auth = $('#authC').html()
+      try {
+        auth = JSON.parse(auth);
+        if (auth.accessToken) {
+          localStorage.setItem("token", auth.accessToken)
+          if (!localStorage.getItem("returnafterlogin"))
+            localStorage.setItem("returnafterlogin", '/');
+        }
+      } catch (err) {
+        console.error(err)
+      }
+      if (localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a></li>')
+        $("#mobile-nav").prepend('<a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a>')
+        $(document).on("click", "a.logoutgtn", function (e) {
+          e.preventDefault()
+          let returnTo = window.location.href
+          if (!returnTo) returnTo = '/'
+          localStorage.setItem("returnafterlogin", window.location.href);
+          localStorage.removeItem("token");
+          window.location = `${$(this).attr('href')}?redirectUrl=${window.location.href}`;
+        });
+        let returnTo = localStorage.getItem("returnafterlogin")
+        if (returnTo) {
+          localStorage.removeItem("returnafterlogin");
+          window.location = returnTo
+        }
+      }
+      if (!localStorage.getItem("token")) {
+        $("#headerLinks").prepend('<li><a class="loginbtn" href="sample.csymapp.com/login">Log in</a></li>')
+        $("#mobile-nav").prepend('<a class="loginbtn" href="sample.csymapp.com/login">Log in</a>')
+        $(document).on("click", "a.loginbtn", function (e) {
+          e.preventDefault()
+          localStorage.setItem("returnafterlogin", window.location.href);
+          window.location = $(this).attr('href');
+
+        });
+      }
+    })
+
+  </script>
+
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $('body').toggleClass('sidebar-hidden');
+        $(this).toggleClass('active');
+      });
+      $('#sidebarCollapse').on('click', function () {
+        $('body').toggleClass('sidebar-hidden');
+      });
+      $('[data-search-clear]').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+      $('#data-search-clear').on('click', function () {
+        $('[search]').val('').trigger('input');
+        sessionStorage.removeItem('search-input');
+      });
+
+      $('.tabs-wrapper > ul a[rel="tab"]').click(function (event) {
+        event.preventDefault();
+        $(this).parent().siblings().removeClass("current");
+        $(this).parent().addClass("current");
+        var tab = $(this).attr("href");
+        $(tab).siblings().css('display', 'none');
+        $(tab).fadeIn()
+      })
+    });
+
+  </script>
+
+</body>
+
+</html>
