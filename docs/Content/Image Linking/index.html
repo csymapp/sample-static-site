@@ -5,10 +5,10 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title> Modular Pages - cseco</title>
-  <meta name="description" content="CSYCMS is a Fast, Simple, and Flexible, file-based content management system, knowledge base and static site generator for nodejs." />
+  <title> Image Linking - cseco</title>
+  <meta name="description" content="CSYCMS has a variety of flexible linking options that allow you to link images from one page to another, and even from remote sources. If you have ever linked files using HTML or worked with a file system using a command line, a lot of this should be elementary to pick up." />
 
-  <meta name="keywords" content="csycms, file-based content management system, knowledge base, static site generator, nodejs" />
+
   <meta name="author" content="Brian Onang&#39;o" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -35,7 +35,7 @@
         <div class="nav-wrapper">
           <a href="../index.html" class="brand-logo"
             style="padding-left: 2rem; text-transform: uppercase; font-size:em;">cseco</a>
-          <a href="Modular&#32;Pages.html#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <a href="Image&#32;Linking.html#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down" id="headerLinks">
           </ul>
         </div>
@@ -45,7 +45,7 @@
     <nav id="sidebar">
       <div id="header-wrapper">
         <div id="header">
-          <a id="logo" href="Modular&#32;Pages.html#"><span class="logo-title" style="font-size:em;">
+          <a id="logo" href="Image&#32;Linking.html#"><span class="logo-title" style="font-size:em;">
               cseco</span>
           </a>
           <form class="searchbox" action="../index.html">
@@ -68,7 +68,7 @@
 
             <li class="dd-item  "
               data-nav-id="sample.csymapp.com/">
-              <a href="Modular&#32;Pages.html">
+              <a href="Image&#32;Linking.html">
                 <i class="fa fa-check read-icon"></i>
                 <span></span>
               </a>
@@ -83,7 +83,7 @@
           </ul>
           <hr />
 
-          <a class="padding" href="Modular&#32;Pages.html#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> Clear
+          <a class="padding" href="Image&#32;Linking.html#" data-clear-history-toggle><i class="fa fa-fw fa-history"></i> Clear
             History</a><br />
 
           <section id="footer">
@@ -101,14 +101,14 @@
       <div id="overlay"></div>
 
       <div class="padding highlightable">
-        <a href="Modular&#32;Pages.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+        <a href="Image&#32;Linking.html#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
         <div id="top-bar">
 
 
           <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-            <a href="../Content.html" itemprop="url"><span itemprop="title">Content</span></a>
+            <a href="../Content" itemprop="url"><span itemprop="title">Content</span></a>
             <i class="fa fa-angle-right"></i>
-            <a href="Modular&#32;Pages.html" itemprop="url"><span itemprop="title">Modular Pages</span></a>
+            <a href="Image&#32;Linking.html" itemprop="url"><span itemprop="title">Image Linking</span></a>
             <a class="fb-share-c" target="_blank"
               href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsabbathschool.gospelsounders.org%2FSabbath-School&amp;src=sdkpreparse"
               style="text-decoration: none; float:right;">
@@ -128,7 +128,73 @@
 
 
 
-      <h2>Modular Pages</h2>
+      <h2>Image Linking</h2>
+<p>CSYCMS has a variety of flexible linking options that allow you to link images from one page to another, and even from remote sources. If you have ever linked files using HTML or worked with a file system using a command line, a lot of this should be elementary to pick up.</p>
+<p>We will run to some easy examples using this very basic, trimmed down model of what a CSYCMS site's <strong>Pages</strong> directory might look like.</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Remember that images and other assets are loaded from <code>public/</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>To get us started, here is a quick look at some of the standard components of a CSYCMS markdown-based image tag.</p>
+<pre><code>![Alt Text](../path/image.ext)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">String</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>!</code></td>
+<td style="text-align:left">When placed at the beginning of a traditional markdown link tag, it indicates this is an image tag.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>[]</code></td>
+<td style="text-align:left">The square bracket is used to wrap the <strong>optional</strong> alt-text for the image.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>()</code></td>
+<td style="text-align:left">The parenthesis is used to surround the reference to the image itself. This is placed directly after the square bracket.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>../</code></td>
+<td style="text-align:left">When used in the link, it indicates a move up a directory.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>You can combine a regular page link and an image link like to wrap an image in a link: <code>[![Alt text](/path/to/img.jpg)](http://example.net/)</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Remember that images and other assets are loaded from <code>public/</code></p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 
 
       <div class="page-meta clearfix">
@@ -146,10 +212,10 @@
 
       </div>
       <div id="navigation">
-        <a class="nav nav-prev" href="Media.html"> <i
+        <a class="nav nav-prev" href="Page&#32;Linking.html"> <i
             class="fa fa-chevron-left"></i></a>
 
-        <a class="nav nav-next" href="Routing.html"><i
+        <a class="nav nav-next" href="Media"><i
             class="fa fa-chevron-right"></i></a>
       </div>
 
