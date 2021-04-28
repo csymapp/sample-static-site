@@ -499,6 +499,14 @@ window.onload = function() {
         "name": "auth-controller",
         "description": "Auth Controller"
       }
+    ],
+    "servers": [
+      {
+        "url": "http://www.example.com"
+      },
+      {
+        "url": "http://www.example1.com"
+      }
     ]
   },
   "customOptions": {}

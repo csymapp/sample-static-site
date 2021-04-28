@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="../favicon.ico">
   <link rel="stylesheet" href="../styles/uf_style.css">
   <link rel="stylesheet" href="../styles/cstyle.css">
-  <!-- <link rel="stylesheet" href="sample.csymapp.com/styles/theme.css"> -->
+  <!-- <link rel="stylesheet" href="/styles/theme.css"> -->
 
   
 
@@ -67,7 +67,7 @@
           <ul class="topics">
 
             <li class="dd-item  "
-              data-nav-id="sample.csymapp.com/">
+              data-nav-id="/">
               <a href="../Todo">
                 <i class="fa fa-check read-icon"></i>
                 <span></span>
@@ -128,17 +128,17 @@
 
       <h1>Todo</h1>
 <ul>
-<li><input type="checkbox" id="checkbox280" checked="true"><label for="checkbox280">Metadata</label></li>
-<li><input type="checkbox" id="checkbox281"><label for="checkbox281">static content</label></li>
-<li><input type="checkbox" id="checkbox282"><label for="checkbox282">Themes</label></li>
-<li><input type="checkbox" id="checkbox283"><label for="checkbox283">Modular pages</label></li>
-<li><input type="checkbox" id="checkbox284"><label for="checkbox284">Media</label></li>
+<li><input type="checkbox" id="checkbox5" checked="true"><label for="checkbox5">Metadata</label></li>
+<li><input type="checkbox" id="checkbox6"><label for="checkbox6">static content</label></li>
+<li><input type="checkbox" id="checkbox7"><label for="checkbox7">Themes</label></li>
+<li><input type="checkbox" id="checkbox8"><label for="checkbox8">Modular pages</label></li>
+<li><input type="checkbox" id="checkbox9"><label for="checkbox9">Media</label></li>
 </ul>
 
 
       <div class="page-meta clearfix">
         <div class="last-updated float-right">
-          Last updated on 26th Apr 2021
+          Last updated on 28th Apr 2021
         </div>
       </div>
 
@@ -193,8 +193,8 @@
         console.error(err)
       }
       if (localStorage.getItem("token")) {
-        $("#headerLinks").prepend('<li><a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a></li>')
-        $("#mobile-nav").prepend('<a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a>')
+        $("#headerLinks").prepend('<li><a class="logoutgtn" href="/logout">Log out</a></li>')
+        $("#mobile-nav").prepend('<a class="logoutgtn" href="/logout">Log out</a>')
         $(document).on("click", "a.logoutgtn", function (e) {
           e.preventDefault()
           let returnTo = window.location.href
@@ -210,8 +210,8 @@
         }
       }
       if (!localStorage.getItem("token")) {
-        $("#headerLinks").prepend('<li><a class="loginbtn" href="sample.csymapp.com/login">Log in</a></li>')
-        $("#mobile-nav").prepend('<a class="loginbtn" href="sample.csymapp.com/login">Log in</a>')
+        $("#headerLinks").prepend('<li><a class="loginbtn" href="/login">Log in</a></li>')
+        $("#mobile-nav").prepend('<a class="loginbtn" href="/login">Log in</a>')
         $(document).on("click", "a.loginbtn", function (e) {
           e.preventDefault()
           localStorage.setItem("returnafterlogin", window.location.href);

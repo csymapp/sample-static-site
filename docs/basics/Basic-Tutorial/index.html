@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="../../favicon.ico">
   <link rel="stylesheet" href="../../styles/uf_style.css">
   <link rel="stylesheet" href="../../styles/cstyle.css">
-  <!-- <link rel="stylesheet" href="sample.csymapp.com/styles/theme.css"> -->
+  <!-- <link rel="stylesheet" href="/styles/theme.css"> -->
 
   
 
@@ -67,7 +67,7 @@
           <ul class="topics">
 
             <li class="dd-item  "
-              data-nav-id="sample.csymapp.com/">
+              data-nav-id="/">
               <a href="../Basic-Tutorial">
                 <i class="fa fa-check read-icon"></i>
                 <span></span>
@@ -139,7 +139,7 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<p>First, let us familiarize ourselves with where CSYCMS stores content.  We will go into more depth in <a href="sample.csymapp.com/basics/Folder%20Structure">folder structure</a>, but for the time being, you need to be aware that all our user content, is stored in the <code>contents/*/</code> folder of your CSYCMS install. The contents folder has severall site folders and only the content in a given site folder can be accessed from that site.</p>
+<p>First, let us familiarize ourselves with where CSYCMS stores content.  We will go into more depth in <a href="/basics/Folder%20Structure">folder structure</a>, but for the time being, you need to be aware that all our user content, is stored in the <code>contents/*/</code> folder of your CSYCMS install. The contents folder has severall site folders and only the content in a given site folder can be accessed from that site.</p>
 <p>The content folders are named starting with the chapter number then the name. eg <code>01.basics</code> But it is important to note that the numeric portion up to and including the <code>.</code> will be removed from URLs.</p>
 <blockquote>
 <blockquote>
@@ -230,7 +230,7 @@ This is the body of **my new page** and I can easily use _Markdown_ syntax here.
 
       <div class="page-meta clearfix">
         <div class="last-updated float-right">
-          Last updated on 26th Apr 2021
+          Last updated on 28th Apr 2021
         </div>
       </div>
 
@@ -285,8 +285,8 @@ This is the body of **my new page** and I can easily use _Markdown_ syntax here.
         console.error(err)
       }
       if (localStorage.getItem("token")) {
-        $("#headerLinks").prepend('<li><a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a></li>')
-        $("#mobile-nav").prepend('<a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a>')
+        $("#headerLinks").prepend('<li><a class="logoutgtn" href="/logout">Log out</a></li>')
+        $("#mobile-nav").prepend('<a class="logoutgtn" href="/logout">Log out</a>')
         $(document).on("click", "a.logoutgtn", function (e) {
           e.preventDefault()
           let returnTo = window.location.href
@@ -302,8 +302,8 @@ This is the body of **my new page** and I can easily use _Markdown_ syntax here.
         }
       }
       if (!localStorage.getItem("token")) {
-        $("#headerLinks").prepend('<li><a class="loginbtn" href="sample.csymapp.com/login">Log in</a></li>')
-        $("#mobile-nav").prepend('<a class="loginbtn" href="sample.csymapp.com/login">Log in</a>')
+        $("#headerLinks").prepend('<li><a class="loginbtn" href="/login">Log in</a></li>')
+        $("#mobile-nav").prepend('<a class="loginbtn" href="/login">Log in</a>')
         $(document).on("click", "a.loginbtn", function (e) {
           e.preventDefault()
           localStorage.setItem("returnafterlogin", window.location.href);
