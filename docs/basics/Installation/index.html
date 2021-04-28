@@ -16,7 +16,7 @@
   <link rel="shortcut icon" href="../../favicon.ico">
   <link rel="stylesheet" href="../../styles/uf_style.css">
   <link rel="stylesheet" href="../../styles/cstyle.css">
-  <!-- <link rel="stylesheet" href="/styles/theme.css"> -->
+  <!-- <link rel="stylesheet" href="sample.csymapp.com/styles/theme.css"> -->
 
   
 
@@ -67,7 +67,7 @@
           <ul class="topics">
 
             <li class="dd-item  "
-              data-nav-id="/">
+              data-nav-id="sample.csymapp.com/">
               <a href="../Installation">
                 <i class="fa fa-check read-icon"></i>
                 <span></span>
@@ -160,7 +160,7 @@ chmod +x installCsycms.sh
 ./installCsycms.sh
 </code></pre>
 <p>Then follow the installation instructions as directed by the script.</p>
-<p>You will have to edit <a href="/csycms/Configuration">some configurations</a></p>
+<p>You will have to edit <a href="sample.csymapp.com/csycms/Configuration">some configurations</a></p>
 <p>If you do not modify the contents of <code>.env</code> manually (we recommend that you do not do that unless you know what you are doing), then you will have some sites created by default. You can list these by:</p>
 <pre><code>./src/csycms-manage.sh list-sites
 </code></pre>
@@ -235,8 +235,8 @@ chmod +x installCsycms.sh
         console.error(err)
       }
       if (localStorage.getItem("token")) {
-        $("#headerLinks").prepend('<li><a class="logoutgtn" href="/logout">Log out</a></li>')
-        $("#mobile-nav").prepend('<a class="logoutgtn" href="/logout">Log out</a>')
+        $("#headerLinks").prepend('<li><a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a></li>')
+        $("#mobile-nav").prepend('<a class="logoutgtn" href="sample.csymapp.com/logout">Log out</a>')
         $(document).on("click", "a.logoutgtn", function (e) {
           e.preventDefault()
           let returnTo = window.location.href
@@ -252,8 +252,8 @@ chmod +x installCsycms.sh
         }
       }
       if (!localStorage.getItem("token")) {
-        $("#headerLinks").prepend('<li><a class="loginbtn" href="/login">Log in</a></li>')
-        $("#mobile-nav").prepend('<a class="loginbtn" href="/login">Log in</a>')
+        $("#headerLinks").prepend('<li><a class="loginbtn" href="sample.csymapp.com/login">Log in</a></li>')
+        $("#mobile-nav").prepend('<a class="loginbtn" href="sample.csymapp.com/login">Log in</a>')
         $(document).on("click", "a.loginbtn", function (e) {
           e.preventDefault()
           localStorage.setItem("returnafterlogin", window.location.href);
